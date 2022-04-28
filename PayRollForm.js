@@ -11,13 +11,13 @@ function validName(){
             setTextValue('.text-error', "invaild msg" );
             return;
         }
-        try {
-            checkName(name.value);
-            setTextValue('.text-error', "");
-        } catch (e) {
-            setTextValue('.text-error', e);
-        }
-    });
+    //     try {
+    //         //checkName(name.value);
+    //         //setTextValue('.text-error', "");
+    //     } catch (e) {
+    //         setTextValue('.text-error', e);
+    //     }
+     });
 }
 /** set event listener on salary range*/
 
@@ -31,13 +31,15 @@ function salaryRange(){
 }
 
 const save = () => {
+   
     try{
         let employeePayrollData = createEmployeePayroll();
         createAndUpdateStorage(employeePayrollData);
 
     }
     catch(e){
-        return;
+       alert(e)
+        return false;
     }
     
 }
