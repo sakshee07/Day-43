@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lng = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+      
+        <title>Employee Payroll Form</title>
+        <link rel = "stylesheet" href = "d-43.css">
+        <script src="./PayRollForm.js"></script>
+        <script src="./PayrollData.js"></script>
+       
+        
+</head>
+<body>
+
+    <!---UC1-->
+    <header class = "header-content header">
+        <div class = "logo-content">
+            <img src ="assets\logo1.png" alt ="" >
+            <div style="flex-direction:row"> 
+                
+                
+                <span class="emp-text">EMPLOYEE</span><br> 
+                <span class="emp-text emp payroll">PAYROLL</span>
+            </div>     
+          </div>
+    </header>
+
+    <div id="formId" class ="form-content">
+        <form  class = "form" action ="#" onreset="resetform()" onsubmit ="save()">
+       
+           <div class ="form head">Employee Payroll Form</div>
+           <div class = "row-content">
+              <label class="label text" for="name">Name :</label>
+              <input type = "text" class ="input" id ="name" name ="name" placeholder="your name" required>
+              <error-output class="text-error" for="text"></error-output>
+            </div>
+               <!--profile input field-->
+        <div class ="row-content">
+             <label class ="label text " for ="profile">Profile image :</label>
+             <div class ="profile row">
+                  <label class="align-verticale-center">
+                    <input type="radio" id="profile1" name="profile" value="assets\i1.png"required>
+                    <image class="profile" id="image1" src="assets\i1.png">
+                  </label>
+                  <label class="align-verticale-center">
+                     <input type="radio" id="profile2" name="profile" value="assets\i2.png"required>
+                     <image class="profile" id="image2" src="assets\i2.png">
+                  </label>
+                  <label class="align-verticale-center">
+                     <input type="radio" id="profile3" name="profile" value="assets\i3.png"required>
+                     <image class="profile" id="image3" src="assets\i3.png">
+                  </label>
+                  <label>
+                    <input type="radio" id="profile3" name="profile" value="assets\i4.png"required>
+                    <image class="profile" id="image3" src="assets\i4.png">
+                 </label>
+            </div>
+        </div>
+        <!--gender-->
+        <div class="row-content">
+            <label class="label text" for="gender">Gender</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label class="text" for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <lable class="text" for="female">Female</lable>
+            </div>
+        </div>
+        <!--department-->
+        <div class="row-content">
+            <label class="label text" for="department">Department</label>
+            <div>
+                <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                <label class="text" for="hr">HR</label>
+                <input class="checkbox" type="checkbox" id="sales" name="sales" value="SALES">
+                <label class="text" for="hr">SALES</label>
+                <input class="checkbox" type="checkbox" id="finance" name="finance" value="FINANCE">
+                <label class="text" for="hr">FINANCE</label>
+                <input class="checkbox" type="checkbox" id="eniginee" name="ENGINEER" value="ENGINEER">
+                <label class="text" for="hr">ENGINEER</label>
+             </div>
+        </div>
+        <!--salary-->
+        <div class="row-content">
+            <label class="label text" for="salary">Salary</label>
+            <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
+                value="400000">
+            <output class="salary-output text" for="salary">400000</output>
+        </div>
+        
+        <!--startdate-->
+        <div class="row-content">
+            <label class="label text" for="start date">Select start date :</label>
+            <div>
+                <select name="Day"  id="day">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select name="Month" id="month">
+                    <option value="Jan">January</option>
+                    <option value="Feb">Febuary</option>
+                    <option value="Mar">March</option>
+                    <option value="Apr">April</option>
+                    <option value="May">May</option>
+                    <option value="Jun">June</option>
+                    <option value="Jul">Jully</option>
+                    <option value="Aug">August</option>
+                    <option value="Sep">September</option>
+                    <option value="Oct">October</option>
+                    <option value="Nov">November</option>
+                    <option value="Dec">December</option>
+                </select>
+                <select name="Year" id="year">
+                    <option value="2020">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                </select>
+            </div>
+        </div>
+        <!--textbox-->
+        <div class="row-content">
+            <label class="label text" for="Notes">Notes</label>
+            <textarea id="notes" class="input" name="Notes"  style="height:100px"></textarea>
+        </div> 
+        <!---cancle button-->               
+            <div class="buttonParent">
+                <a href="" class="resetButton button cancelButton">Cancel</a>
+                <!--submit & reset button-->
+                <div class="submit reset">
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                 </div>
+            </div>  
+        </form> 
+        </div>
+    </body>
+ </html>
+                
